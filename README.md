@@ -1,157 +1,109 @@
 <p align="center">
- <img width="180px" src="https://i.ibb.co/Qn1W6cP/image.png" align="center"/>
- <h2 align="center">TheMystic-Bot-MD</h2>
- <p align="center">Un chatbot automatizado para WhatsApp basado en Node.js, que permite realizar múltiples funciones y personalizaciones en la plataforma.</p>
+  <img width="600px" src="https://telegra.ph/file/2b97c6e486ae7412c6122.jpg" alt="Shawaza-Bot-MD"/>
+  <h2 align="center">Shawaza-Bot-MD</h2>
+  <p align="center">بوت واتساب مدعوم بالذكاء الاصطناعي ومبني بلغة Node.js.</p>
 </p>
+
+#
+
+## التعليمات
+
+> **الأهمية**  
+> استورد المشروع علي حسابك أولا باستخدام `import response`.  
+> قم بصنع جلسة ارتباط للرقم الذي تود تفعيل البوت عليه واضافها في المسار `session`.  
+
+> **التنويه**  
+> المشروع ما هو اللي محض الخطوه الاولى في سبيل التعلم.  
+> المشروع حجر أساس اكمل بنائه بطريقتك الخاصة.  
+> تذكر دائما أن المطور الناجح هو من يساعد غيره يا صديقي.  
+
+> **التحذيرات**  
+> يُفضل تشغيل البوت على خادم آمن ومخصص لتجنب أي مشاكل.  
+> لا تعبث بأي شيء ما لم يكن لك دراية به.  
+> استخدم روابط الدعم بالاسفل اذا احتجت للمساعدة.  
+
+#
+
+## التنصيب
 
 <p align="center">
-  <a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD/graphs/contributors">
-    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/BrunoSobrino/TheMystic-Bot-MD?style=for-the-badge" />
+  <a href="https://app.koyeb.com/deploy?type=git&repository=https://github.com/BrunoSobrino/TheMystic-Bot-MD&branch=master&name=mysticbot">
+    <img src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg" alt="Deploy to Koyeb"/>
   </a>
-  <a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues">
-    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/BrunoSobrino/TheMystic-Bot-MD?style=for-the-badge" />
+  <a href="https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FBrunoSobrino%2FTheMystic-Bot-MD">
+    <img src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg" alt="Deploy to Render"/>
   </a>
-  <a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD/pulls">
-    <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/BrunoSobrino/TheMystic-Bot-MD?style=for-the-badge" />
+  <a href="https://repl.it/github/BrunoSobrino/TheMystic-Bot-MD">
+    <img src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg" alt="Run on Repl.it"/>
   </a>
-  <a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD/commits">
-    <img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/BrunoSobrino/TheMystic-Bot-MD?style=for-the-badge" />
+  <a href="https://dashboard.toystack.ai/repositories/a1a5a3d9-c3df-453f-b2da-043e21f5c99e/deployments">
+    <img src="https://via.placeholder.com/130x30/007bff/ffffff?text=Deploy+to+ToyStack" alt="Deploy to ToyStack"/>
   </a>
-  <a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/BrunoSobrino/TheMystic-Bot-MD?style=for-the-badge" />
-  </a>
-  <a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD/fork">
-    <img alt="GitHub Forks" src="https://img.shields.io/github/forks/BrunoSobrino/TheMystic-Bot-MD?style=for-the-badge" />
+  <a href="https://my.scalingo.com/deploy?source=https://github.com/BrunoSobrino/TheMystic-Bot-MD">
+    <img src="https://via.placeholder.com/130x30/4F4E8A/ffffff?text=Deploy+to+Scalingo" alt="Deploy to Scalingo"/>
   </a>
 </p>
 
-<p align="center">
-  <a href="https://api.whatsapp.com/send?phone=+5219992843881&text=&text=.menu">Demo</a>
-  ·
-  <a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues/new?assignees=&labels=Bug">Reportar un Bug</a>
-  ·
-  <a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues/new?assignees=&labels=Enhancement">Solicitar una Característica</a>
-</p>
+#
 
-<!-- <p align="center">
-  <a href="/src/docs/README_en.md">English</a>
-  ·
-  <a href="/src/docs/README_pt-br.md">Português</a>
-</p> -->
+## الاستضافة
 
-<p align="center">¡Ayuda a mantener el proyecto activo con tu <a href="https://www.paypal.me/BrunoSob">donación</a> y contribuye a mejorar las funciones del chatbot para todos!</p>
+### Scalingo
 
-# Despliegue, Soporte y Comunidad
+┌─ 〘 *طريقة الاستضافة في منصة `Scalingo`* 〙─ ⳹  
+│✑ [الرابط: https://dashboard.scalingo.com/](https://dashboard.scalingo.com/)  
+└┬ ✑ **الخطوات**  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ التسجيل في المنصة عبر ربط حسابك على `GitHub`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ بعد التسجيل اضغط على `Create an app`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ أضف اسمًا لمشروعك في خانة `App name`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Create app`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Link repo` في خيار `GitHub`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اختر حسابك في خانة `Select an organization`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اختر ملف بوتك في خانة `Select a repository`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اختر الفرع المطلوب في خانة `Select a branch`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Content`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Finish`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Overview`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اختر `Deploy`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Manual deployment`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Trigger deployment`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ لمتابعة التحميل اضغط على `Deployment in progress (starting)…`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ انتظر حتى يكتمل التحميل.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ تهانينا! تم تفعيل البوت بنجاح.  
+└─────〘 *𝚂𝙰𝚈𝙴𝙳-𝚂𝙷𝙰𝚆𝙰𝚉𝙰* 〙─────
 
-- [Opciones de Despliegue](#opciones-de-despliegue)
-  - [Despliegue en Cafirexos](#despliegue-en-cafirexos)
-  - [Despliegue en BoxMineWorld](#despliegue-en-boxmineworld)
-  - [Despliegue en Otros](#despliegue-en-otros)
-- [Soporte y Comunidad](#soporte-y-comunidad)
-  - [Comunidades de Ayuda](#guía-de-uso)
-  - [Colaboradores](#colaboradores)
-  - [Agradecimientos](#agradecimientos)
-  - [Desarollador Principal](#desarollador-principal)
+### ToyStack
 
-# Avisos Importantes
+┌─ 〘 *طريقة الاستضافة في منصة `ToyStack`* 〙─ ⳹  
+│✑ [الرابط: https://dashboard.toystack.ai/](https://dashboard.toystack.ai/)  
+└┬ ✑ **الخطوات**  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ سجل الدخول إلى منصة `ToyStack` باستخدام حساب `GitHub` الخاص بك.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اسمح للمنصة بالوصول إلى مشاريعك.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `IMPORT & ACTIVATE REPOSITORIES`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اختر المستودع الذي يحتوي على البوت من حساب `GitHub` الخاص بك.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اختر الفرع الذي تريد نشره.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اختر الخطة المجانية للنشر `0$`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `ACTIVATION`.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ أضف معلوماتك المطلوبة واستكمل الخطوات.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Deploy from a branch`، ثم اختر البيئة (master)، ثم زمن التفعيل.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ اضغط على `Deploy` لبدء عملية النشر.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ انتظر حتى تكتمل عملية النشر.  
+&nbsp;&nbsp;&nbsp;&nbsp;│✑ تهانينا! الآن البوت جاهز للعمل.  
+└─────〘 *𝚂𝙰𝚈𝙴𝙳-𝚂𝙷𝙰𝚆𝙰𝚉𝙰* 〙─────
 
-> [!IMPORTANT]\
-> Este proyecto **no está afiliado de ninguna manera** con `WhatsApp`, `Inc. WhatsApp` es una marca registrada de `WhatsApp LLC`, y este bot es un **desarrollo independiente** que **no tiene ninguna relación oficial con la compañía**.
+#
 
-> [!IMPORTANT]\
-> **No** se asegura que este **proyecto siga funcionando al 100% debido** a cuestiones de tiempo personales de @BrunoSobrino, por lo cual **el proyecto esta en manos de colaboradores** y usuarios que deseen aportar actualizaciones.
+## المطور
 
+- [تواصل معي على واتساب](https://wa.me/201145624848)
+- [صفحتي على فيسبوك](https://www.facebook.com/sayed.shawaza.2000?mibextid=ZbWKwL)
+- [صفحتي على إنستغرام](https://www.instagram.com/sayedhamdye2000?igsh=MW54b3lrZnZoYXV2ZQ==)
+- [حسابي على تيك توك](https://www.tiktok.com/@s_shawaza2000?_t=8pSBOeZuONc&_r=1)
 
-# Opciones de despliegue
+#
 
-## Despliegue en Cafirexos
+## الدعم
 
-<a href="https://cafirexos.com">
-  <img width="180px" src="https://cdn.cafirexos.com/logos/logo_cfros_2000x2000.png"/>
-</a>
-
-<details>
- <summary><b>:paperclip: Enlaces Importantes</b></summary>
-
-- **Sitio Web:** [cafirexos.com](https://cafirexos.com)
-- **Área de Clientes:** [clientes.cafirexos.com](https://clientes.cafirexos.com)
-- **Panel de Control:** [panel.cafirexos.com](https://panel.cafirexos.com)
-- **Estado de los Servicios:** [estado.cafirexos.com](https://estado.cafirexos.com)
-- **Documentación:** [docs.cafirexos.com](https://docs.cafirexos.com)
-- **Canal de WhatsApp:** [¡Únete aquí!](https://cafirexos.com/whatsapp)
-- **Comunidad de WhatsApp:** [¡Únete aquí!](https://cafirexos.com/comunidad)
-
-</details>
-
-## Despliegue en BoxMineWorld
-
-<a href="https://boxmineworld.com">
-  <img width="180px" src="https://i.ibb.co/sFygw8p/favicon.png"/>
-</a>
-
-<details>
- <summary><b>:paperclip: Enlaces Importantes</b></summary>
-
-- **Sitio Web:** [boxmineworld.com](https://boxmineworld.com)
-- **Área de Clientes:** [dash.boxmineworld.com](https://dash.boxmineworld.com)
-- **Panel de Control:** [panel.boxmineworld.com](https://panel.boxmineworld.com)
-- **Documentación:** [docs.boxmineworld.com](https://docs.boxmineworld.com)
-- **Comunidad de Discord:** [¡Únete aquí!](https://discord.gg/84qsr4v)
-
-</details>
-
-## Despliegue en Otros
-
-En esta sección encontrarás **botones de despliegue** que te permitirán implementar el proyecto en distintos entornos con un solo clic. Este proceso es **automático** y no requiere configuraciones manuales adicionales. Simplemente selecciona la plataforma deseada y haz clic en el botón correspondiente para **desplegar** tu proyecto de manera rápida y sencilla.
-
-[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=514876515&ref=master&geo=EuropeWest)
-[![Deploy to Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/BrunoSobrino/TheMystic-Bot-MD)
-[![Deploy to Heroku](https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg)](https://www.heroku.com/deploy?template=https://github.com/BrunoSobrino/TheMystic-Bot-MD)
-[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&name=themystic-bot-md&repository=https://github.com/BrunoSobrino/TheMystic-Bot-MD)
-[![Run on Repl.it](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://repl.it/github/BrunoSobrino/TheMystic-Bot-MD)
-[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://dashboard.render.com/blueprint/new?repo=https://github.com/BrunoSobrino/TheMystic-Bot-MD)
-<!-- [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/BrunoSobrino/TheMystic-Bot-MD) -->
-<a href="https://brunosobrino.github.io/TheMystic-Bot-MD/">
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Termux">
-</a>
-<a href="https://brunosobrino.github.io/TheMystic-Bot-MD/">
-  <img src="https://img.shields.io/badge/Linux-black?style=for-the-badge&logo=linux&logoColor=white" alt="Linux">
-  <a href="https://brunosobrino.github.io/TheMystic-Bot-MD/">
-  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows">
-
-# Soporte y Comunidad
-
-## Comunidades de Ayuda
-
-En este espacio podrás encontrar diversas **comunidades de ayuda** donde podrás **resolver tus dudas**, **compartir experiencias** y **colaborar** con otros usuarios. Únete a la comunidad que mejor se adapte a tus necesidades y forma parte de un **entorno de apoyo mutuo**.
-
-<table>
-
-| RRSS | Tipo | Idioma | Enlace |
-| --- | --- | --- |--- |
-| WhatsApp | Canal | Español | [¡Únete aquí!](https://whatsapp.com/channel/0029Vaein6eInlqIsCXpDs3y) |
-| WhatsApp | Grupo | Español | [¡Únete aquí!](https://chat.whatsapp.com/Daa3Fe4A9JeFpRI2QtBS4s) |
-| WhatsApp | Group | English | [¡Join here!](https://chat.whatsapp.com/HTatrQokqODKx9eem0CKuY) |
-| WhatsApp | Grupo | Português | [¡Junte-se aqui!](https://chat.whatsapp.com/J8tFq87Ia0jEnx20NvCQxN) |
-
-</table>
-
-## Colaboradores
-
-Conoce a los **colaboradores** que han aportado al desarrollo de este proyecto. Su apoyo ha sido clave para **mejorar** y **expandir** las funcionalidades del proyecto.
-
-<a href="https://github.com/BrunoSobrino/TheMystic-Bot-MD/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=BrunoSobrino/TheMystic-Bot-MD" /> 
-</a>
-
-## Agradecimientos
-
-<a href="https://github.com/BochilGaming/games-wabot-md/tree/multi-device">
-  <img src="https://i.ibb.co/CMpM8pk/Bochil-Gaming.png" width="180px"/>
-</a>
-
-## Desarollador Principal
-
-<a href="https://github.com/BrunoSobrino">
-  <img src="https://i.ibb.co/Qn1W6cP/image.png" width="180px"/>
-</a>
+- [قناة الدعم على واتساب 1](https://whatsapp.com/channel/0029VaL2bnW0rGiPZq8B5S2M)
+- [قناة الدعم على واتساب 2](https://whatsapp.com/channel/0029Vael6wMJP20ze3IXJk0z)
+- [مجموعة الدعم على واتساب](https://chat.whatsapp.com/KU0tgrFIQje5DX6KFuvsft)

@@ -1,4 +1,3 @@
-"use strict";
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'; 
 import './config.js';
 import './api.js';
@@ -16,9 +15,9 @@ import {format} from 'util';
 import pino from 'pino';
 import Pino from 'pino';
 import {Boom} from '@hapi/boom';
-import {makeWASocket, protoType, serialize} from './src/libraries/simple.js';
+import {makeWASocket, protoType, serialize} from './simple.js';
 import {Low, JSONFile} from 'lowdb';
-import store from './src/libraries/store.js';
+import store from './lib/store.js';
 const {DisconnectReason, useMultiFileAuthState, fetchLatestBaileysVersion, makeCacheableSignalKeyStore, jidNormalizedUser, PHONENUMBER_MCC} = await import("baileys");
 import readline from 'readline';
 import NodeCache from 'node-cache';
@@ -27,9 +26,7 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 let stopped = 'close';  
 protoType();
 serialize();
-const msgRetryCounterMap = new Map();
-const msgRetryCounterCache = new NodeCache({ stdTTL: 0, checkperiod: 0 });
-const userDevicesCache = new NodeCache({ stdTTL: 0, checkperiod: 0 });
+
 
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
   return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString();
@@ -103,9 +100,10 @@ loadChatgptDB();
 
 
 const {state, saveCreds} = await useMultiFileAuthState(global.authFile);
-
+const msgRetryCounterMap = () => { };
+const msgRetryCounterCache = new NodeCache()
 const {version} = await fetchLatestBaileysVersion();
-let phoneNumber = global.botnumber || process.argv.find(arg => /^\+\d+$/.test(arg));
+let phoneNumber = global.botnumber
 
 const methodCodeQR = process.argv.includes("qr")
 const methodCode = !!phoneNumber || process.argv.includes("code")
@@ -126,38 +124,37 @@ console.log('[ ❗ ] Por favor, seleccione solo 1 o 2.\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
 }
 
-console.info = () => {} // https://github.com/skidy89/baileys actualmente no muestra logs molestos en la consola
+//console.info = () => {} // https://github.com/skidy89/baileys actualmente no muestra logs molestos en la consola
 const connectionOptions = {
-    logger: Pino({ level: 'silent' }),
-    printQRInTerminal: opcion === '1' || methodCodeQR,
-    mobile: MethodMobile,
-    browser: opcion === '1' ? ['TheMystic-Bot-MD', 'Safari', '2.0.0'] : methodCodeQR ? ['TheMystic-Bot-MD', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '20.0.04'],
-    auth: {
-        creds: state.creds,
-        keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: 'fatal' }).child({ level: 'fatal' })),
-    },
-    waWebSocketUrl: 'wss://web.whatsapp.com/ws/chat?ED=CAIICA',
-    markOnlineOnConnect: true,
-    generateHighQualityLinkPreview: true,
-    getMessage: async (key) => {
-        let jid = jidNormalizedUser(key.remoteJid);
-        let msg = await store.loadMessage(jid, key.id);
-        return msg?.message || "";
-    },
-    patchMessageBeforeSending: async (message) => {
-        let messages = 0;
-        global.conn.uploadPreKeysToServerIfRequired();
-        messages++;
-        return message;
-    },
-    msgRetryCounterCache: msgRetryCounterCache,
-    userDevicesCache: userDevicesCache,
-    //msgRetryCounterMap,
-    defaultQueryTimeoutMs: undefined,
-    cachedGroupMetadata: (jid) => global.conn.chats[jid] ?? {},
-    version,
-    //userDeviceCache: msgRetryCounterCache <=== quien fue el pendejo?????
-};
+logger: pino({ level: 'silent' }),
+printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
+mobile: MethodMobile, 
+browser: opcion == '1' ? ['TheMystic-Bot-MD', 'Safari', '2.0.0'] : methodCodeQR ? ['TheMystic-Bot-MD', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '20.0.04'],
+auth: {
+creds: state.creds,
+keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
+},
+// so you gonna steal this?? https://github.com/skidy89
+// waWebSocketUrl provides better decryption.
+waWebSocketUrl: 'wss://web.whatsapp.com/ws/chat?ED=CAIICA', 
+markOnlineOnConnect: true, 
+generateHighQualityLinkPreview: true, 
+getMessage: async (key) => {
+let jid = jidNormalizedUser(key.remoteJid)
+let msg = await store.loadMessage(jid, key.id)
+return msg?.message || ""
+},
+patchMessageBeforeSending: async (message) => { //fix mass loss messages
+let messages = 0
+global.conn.uploadPreKeysToServerIfRequired()
+messages++
+return message
+},
+msgRetryCounterCache,
+msgRetryCounterMap,
+defaultQueryTimeoutMs: undefined,   
+version
+}
 
 global.conn = makeWASocket(connectionOptions);
 
@@ -230,7 +227,7 @@ if (opts['server']) (await import('./server.js')).default(global.conn, PORT);
         - atte: sk1d             */
 
 function clearTmp() {
-  const tmp = [join(__dirname, './src/tmp')];
+  const tmp = [join(__dirname, './tmp')];
   const filename = [];
   tmp.forEach((dirname) => readdirSync(dirname).forEach((file) => filename.push(join(dirname, file))));
   return filename.map((file) => {
@@ -268,13 +265,13 @@ fs.watch(dirToWatchccc, (eventType, filename) => {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./MysticSession")
+let directorio = readdirSync("./Session")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./MysticSession/${files}`)
+unlinkSync(`./Session/${files}`)
 })
 } 
 
@@ -299,7 +296,7 @@ console.log(chalk.bold.red(`[ ℹ️ ] Algo salio mal durante la eliminación, a
 }}
 
 function purgeOldFiles() {
-const directories = ['./MysticSession/', './jadibts/']
+const directories = ['./Session/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -339,7 +336,7 @@ if (opcion == '1' || methodCodeQR) {
   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
-await fs.unlinkSync("./MysticSession/" + "creds.json")
+await fs.unlinkSync("./Session/" + "creds.json")
 console.log(chalk.bold.redBright(`[ ⚠ ] Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
@@ -392,7 +389,6 @@ global.reloadHandler = async function(restatConn) {
     } catch { }
     conn.ev.removeAllListeners();
     global.conn = makeWASocket(connectionOptions, {chats: oldChats});
-    store?.bind(conn);
     isInit = true;
   }
   if (!isInit) {
@@ -519,19 +515,20 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn?.user) return;
   await clearTmp();
 }, 180000);
-/*
+
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn?.user) return; //intervals at the same thime tho
   await purgeSessionSB();
   await purgeOldFiles();
   await purgeSession();
-}, 1000 * 60 * 60);*/
+}, 1000 * 60 * 60);
 
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn?.user) return;
   const _uptime = process.uptime() * 1000;
   const uptime = clockString(_uptime);
-  const bio = `[ ⏳ ] Uptime: ${uptime}`;
+  
+  const bio = `مرحبا انا بوت ❲ ${global.wm} ❳\nاعمل بتقنيات الذكاء الاصطناعي\nاعمل منذ ❲ ${uptime} ❳\nلاستخدامي اكتب ❲ .اوامر ❳ 🧞`;
   await conn?.updateProfileStatus(bio).catch((_) => _);
 }, 60000);
 function clockString(ms) {
