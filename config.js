@@ -103,9 +103,9 @@ global.time = d.toLocaleTimeString('en', { hour: '2-digit', minute: '2-digit', s
 global.wm2 = `${dia} ${fecha}\n𝑭𝑶𝑿-𝑩𝑶𝑻`;
 global.gt = '𝑭𝑶𝑿-𝑩𝑶𝑻';
 global.mysticbot = '𝑭𝑶𝑿-𝑩𝑶𝑻';
-global.channel = 'https://whatsapp.com/channel/0029Vaein6eInlqIsCXpDs3y';
-global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
-global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
+global.channel = 'https://whatsapp.com/channel/0029VaeXAKJAjPXLKGuZSr46';
+global.md = 'https://whatsapp.com/channel/0029VaeXAKJAjPXLKGuZSr46';
+global.mysticbot = 'https://whatsapp.com/channel/0029VaeXAKJAjPXLKGuZSr46';
 
 global.waitt = '*━────── •●• ──────━*\n> [ 🧞 ] جاري التحميل ...\n*━────── •●• ──────━*';
 global.waittt = '*━────── •●• ──────━*\n> [ 🧞 ] جاري التحميل ...\n*━────── •●• ──────━*';
