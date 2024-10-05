@@ -16,6 +16,9 @@ const { say } = cfonts;
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 let isRunning = false;
 
+// تعيين المتغير global.authFile لضمان أنه يحتوي على قيمة صحيحة
+global.authFile = 'auth_directory';  // يجب تغيير هذا إلى المسار الصحيح الذي تريد استخدامه
+
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver));
 
 console.log(chalk.yellow.bold('—◉ㅤIniciando sistema...'));
