@@ -72,12 +72,12 @@ global.immg5 = fs.readFileSync('./Menu5.png');
 
 
 
-global.img1 = 'https://telegra.ph/file/ba984d78fa802662438ee.jpg';
-global.img2 = 'https://telegra.ph/file/0e22282b399e105776618.jpg';
-global.img3 = 'https://telegra.ph/file/5e6456d22a8264b08a2bc.jpg';
-global.img4 = 'https://telegra.ph/file/996f53288a1e2f4f35812.jpg';
-global.img5 = 'https://telegra.ph/file/07cd1c2a9d2fe455e3b77.jpg';
-global.img6 = 'https://telegra.ph/file/fbac075550b8622a94b8e.jpg';
+global.img1 = 'https://i.ibb.co/VDZSnxd/file.jpg';
+global.img2 = 'https://i.ibb.co/VDZSnxd/file.jpg';
+global.img3 = 'https://i.ibb.co/VDZSnxd/file.jpg';
+global.img4 = 'https://i.ibb.co/VDZSnxd/file.jpg';
+global.img5 = 'https://i.ibb.co/VDZSnxd/file.jpg';
+global.img6 = 'https://i.ibb.co/VDZSnxd/file.jpg';
 
 
 global.mods = [];
@@ -141,7 +141,7 @@ global.fcon = {key: {participant: '0@s.whatsapp.net', remoteJid: 'status@broadca
 global.fgif2 = {key: {participant: '0@s.whatsapp.net',  ...('6289643739077-1613049930@g.us' ? {remoteJid: '6289643739077-1613049930@g.us'} : {})}, message: {'videoMessage': {'title': '𝑭𝑶𝑿-𝑩𝑶𝑻', 'h': `Hmm`, 'seconds': '99999', 'gifPlayback': 'true', 'caption': '𝑭𝑶𝑿-𝑩𝑶𝑻', 'jpegThumbnail': false}}};
 global.fgrp = {key: {participant: '0@s.whatsapp.net', remoteJid: '6289643739077-1613049930@g.us', fromMe: false, 'id': wm}, message: {'contactMessage': { 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid= '201289211701@s.whatsapp.net':'201289211701@s.whatsapp.net'\nitem1.X-ABLabel:Ponsel\nEND:VCARD` } }, 'participant': '0@s.whatsapp.net' };
 global.floc = {key: {participant: '0@s.whatsapp.net', remoteJid: 'status@broadcast', fromMe: false}, message: {locationMessage: {degreesLatitude: 37.7749, degreesLongitude: -122.4194, name: 'Palestine', address: 'San Francisco, CA, USA', url: 'https://maps.google.com/?q=37.7749,-122.4194'}}};
-global.frol = {key: {participant: '0@s.whatsapp.net', remoteJid: 'status@broadcast', fromMe: false}, message: {orderMessage: { itemCount: 2024, status: 1, thumbnail: 'https://telegra.ph/file/ba984d78fa802662438ee.jpg', surface: 1, message: wm, orderTitle: packname, sellerJid: '0@s.whatsapp.net' } } };
+global.frol = {key: {participant: '0@s.whatsapp.net', remoteJid: 'status@broadcast', fromMe: false}, message: {orderMessage: { itemCount: 2024, status: 1, thumbnail: 'https://i.ibb.co/VDZSnxd/file.jpg', surface: 1, message: wm, orderTitle: packname, sellerJid: '0@s.whatsapp.net' } } };
 
 global.multiplier = 99;
 global.flaaa = [
