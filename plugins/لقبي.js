@@ -12,7 +12,7 @@ handleCommand(req, res) {
    
     switch(command) {
         case ''.لقبي':
-            res.send('لقبك هو شادو');
+            res.send('*سفࢪوت الكبير „ 3 » *');
             break;
         case '.الألقاب':
         
